@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  app:
+    image: brachi2002/final-python-app:latest
+    container_name: final-app
+    ports:
+      - "5000:5000"
+    restart: always
