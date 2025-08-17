@@ -1,10 +1,11 @@
 #!/bin/bash
 set -e
 
-cd /home/ec2-user/app
+# מעבר לתיקיית הפרויקט שה־CodeDeploy הוריד
+cd /home/ec2-user/DevOps-Project
 
 echo "Stopping old containers..."
-docker-compose down || true
+sudo docker-compose down || true
 
 echo "Starting new containers..."
-docker-compose up -d
+sudo docker-compose up -d
